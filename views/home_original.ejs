@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/95cdf720ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .homelink:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <h1 class="font-weight-light mt-2 mb-2 pl-2"><a class="homelink" href='#'><i
+                    class="fab fa-twitter mr-3"></i>Blog Gallery</h1></a>
+        <div>
+            <% if(!user){ %>
+            <a href="http://localhost:5000/login"><span class="p-3">Login</span></a>
+            <% }%>
+            <% if(user){ %>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/write">Write</a>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Acount</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">MyBlog</button>
+            <a href="http://localhost:5000/logout"><span class="p-3">Logout</span></a>
+            <div>현재 로그인:<%=user.email%></div>
+            <% }%>
+        </div>
+    </nav>
+
+    <hr class="mt-2 mb-5">
+    <div class="container">
+
+        <div class="row text-center text-lg-left">
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+                    <!-- <span class="d-block text-center">d-block</span>
+                    <span class="d-block p-2 text-center">d-block</span> -->
+                </a>
+
+
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

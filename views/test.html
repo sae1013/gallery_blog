@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/95cdf720ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .submit {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-12 mt-4">
+            <form method="post" enctype="multipart/form-data" action="/write">
+                <div>
+                    <label>제목:</label>
+                    <input type="text" name="title"></input>
+                </div>
+                <div>
+                    <label>작성자:</label>
+                    <input type="text" value="sd" name="writer">
+                </div>
+                <div>
+                    <label>Choose File:</label>
+                    <input type="file" name="photo" />
+                </div>
+                <div>
+                    <label>내용</label>
+                    <textarea name="description"></textarea>
+                </div>
+                <div class="submit">
+                    <input class="submit_btn" type="submit" value="posting!" name="submit" />
+                </div>
+            </form>
+
+        </div>
+</body>
+
+</html>

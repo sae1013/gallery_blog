@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include("nav")%>
+
+    <% for(var i = 0 ;i< results.length;i++){ %>
+    <% var objectid = results[i]._doc._id; %>
+    <% var objectUrl ="/post/"+objectid %>
+    <div class="col-lg-3 col-md-4 col-6">
+        <a href=<%= objectUrl %> class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src=<%=results[i]._doc.image %> alt="">
+            <!-- <span class="d-block text-center">d-block</span>
+                    <span class="d-block p-2 text-center">d-block</span> -->
+        </a>
+        <%=results[i]._doc.title%>
+    </div>
+    <% } %>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/95cdf720ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .homelink:hover {
+            text-decoration: none;
+        }
+
+        .writer {
+            font-size: 13px;
+        }
+
+        .container_custom {
+            width: 90%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include("nav")%>
+
+    <hr class="mt-2 mb-5">
+    <div class="container_custom">
+
+        <div class="row text-center text-lg-left">
+            <% for(var i = 0 ;i< results.length;i++){ %>
+            <% var objectid = results[i]._doc._id; %>
+            <% var objectUrl ="/post/"+objectid %>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href=<%= objectUrl %> class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src=<%=results[i]._doc.image %> alt="">
+                    <span class="d-block text-center font-weight-bolder"><%=results[i]._doc.title%></span>
+                    <span class="writer d-block p-2 text-center"><%= results[i]._doc.writer %> </span>
+                </a>
+            </div>
+            <% } %>
+
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

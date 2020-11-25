@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light">
+    <h1 class="font-weight-light mt-2 mb-2 pl-2"><a class="homelink" href='/'><i class="fab fa-twitter mr-3"></i>Blog
+            Gallery</h1></a>
+    <div class="pt-3">
+        <% if(!user){ %>
+        <a class="btn btn-primary btn-sm" href="http://localhost:5000/login"><span class="p-3">Login</span></a>
+        <% }%>
+        <% if(user){ %>
+        <a class="btn btn-outline-success my-2 my-sm-0" href="/write">Write</a>
+        <% var list_by_user_URL = '/list/' + user.email %>
+        <a href=<%=list_by_user_URL %> class="btn  btn-outline-success my-2 my-sm-0" type="submit">MyBlog</a>
+        <a href="http://localhost:5000/logout" class="btn btn-primary btn-sm "><span class="p-3">Logout</span></a>
+        <div class="pl-5 mt-2">현재 로그인:<%=user.email%></div>
+        <% }%>
+    </div>
+</nav>

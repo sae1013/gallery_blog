@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/95cdf720ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #dfe6e9;
+        }
+
+        .homelink:hover {
+            text-decoration: none;
+        }
+
+        .container {
+            /* background-color: #b2bec3; */
+            /* width: 50%; */
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .card {
+            /* background: #dfe6e9; */
+            margin-top: 7%;
+            margin-bottom: 7%;
+
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .user-info {
+            padding: 5%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .user-img {
+            width: 20%;
+            border-radius: 100%;
+        }
+
+        .footer {
+            padding: 0 3% 3% 0;
+            text-align: right;
+        }
+
+        .footer_button {
+            margin-left: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include("nav")%>
+
+    <div class="container">
+        <div class="card">
+            <div class="title p-2">
+                <span><%=title %></span>
+            </div>
+            <div class="card-image">
+                <img src=<%=filepath %> width="100%">
+            </div>
+            <div class="content">
+                <div class="description p-3">
+                    <%=description %>
+                </div>
+                <div class="user-info">
+                    <img class="user-img" src="../uploads/dog-img.jpg" alt="">
+                    <span class="ml-2"><%=writer %></span>
+                </div>
+                <div class="footer">
+                    posted: <%=created_at %>
+                </div>
+                <% if(user && user.email == writer) { %>
+                <div class="footer_button">
+                    <form action="/modify" method="post">
+                        <input type="hidden" name="post_id" value=<%=post_id %>>
+                        <button type="submit" class="btn btn-info btn-lg">
+                            <i class="fa fa-edit mr-1"></i>modify</button>
+                    </form>
+
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="post_id" value=<%=post_id %>>
+                        <button type="submit" class="btn btn-danger btn-lg">
+                            <i class="fa fa-trash-alt mr-1 "></i>delete</button>
+                    </form>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
